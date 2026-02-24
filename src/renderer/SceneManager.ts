@@ -7,7 +7,6 @@ export class SceneManager {
     public renderer: THREE.WebGLRenderer;
     private animationFrameId: number | null = null;
     private renderCallbacks: Array<() => void> = [];
-    private envObjects: THREE.Object3D[] = [];
 
     constructor(canvas: HTMLCanvasElement, width: number, height: number, backgroundType: string = 'forest') {
         // Scene
@@ -30,7 +29,7 @@ export class SceneManager {
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
         // Build themed environment
-        this.envObjects = EnvironmentBuilder.build(this.scene, backgroundType);
+        EnvironmentBuilder.build(this.scene, backgroundType);
     }
 
     addRenderCallback(cb: () => void): void {

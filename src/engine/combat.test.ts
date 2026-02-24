@@ -5,6 +5,7 @@ import type { CharacterData, EnemyData, InventoryItem, CombatAction } from './ty
 const mockCharacter: CharacterData = {
     id: 'char-1',
     name: 'Warrior',
+    class: 'Warrior',
     hp: 200,
     mp: 30,
     atk: 25,
@@ -28,6 +29,7 @@ const mockCharacter: CharacterData = {
 const mockEnemy: EnemyData = {
     id: 'enemy-1',
     name: 'Goblin',
+    class: 'Goblin',
     hp: 80,
     mp: 10,
     atk: 12,
